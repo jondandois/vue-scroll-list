@@ -1,5 +1,5 @@
 <template>
-  <div class="list-card" v-bind:style="styleObject" v-on:click="cardClick">
+  <div v-bind:id="card_id" class="list-card" v-bind:style="styleObject" v-on:click="cardClick">
     <span class="label">{{thing.size}}</span>
   </div>
 </template>
@@ -11,6 +11,7 @@
     props: ['thing', 'selected_thing'],
     data () {
       return {
+        card_id: `card-${this.thing.id}`,
         selectedThing: this.selected_thing,
         styleObject: {
           fontSize: '20px',

@@ -24,6 +24,8 @@
           this.selectedThing.id = null;
         } else {
           this.selectedThing.id = this.thing.id
+          var card = document.getElementById(`card-${this.thing.id}`);
+          card.scrollIntoView(true);
         }
       }
     }
